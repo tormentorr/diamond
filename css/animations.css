@@ -1,0 +1,202 @@
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header Animations */
+.header {
+    animation: slideDown 0.8s ease-out;
+}
+
+.brand-logo {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.nav-links a {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.nav-links .portfolio-link {
+    opacity: 1;
+    animation: none;
+}
+
+/* Stagger nav links */
+.nav-links a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.nav-links a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.nav-links a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.nav-links a:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.nav-links a:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Investment Cards Animation */
+.investment-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    will-change: transform, opacity;
+}
+
+.investment-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Separate hover transition for cards */
+.investment-card:hover {
+    transform: translateY(-5px) !important;
+    /* Force hover transform */
+}
+
+.card-icon {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s;
+}
+
+.card-icon.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Roadmap Cards Animation */
+.roadmap-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    will-change: transform, opacity;
+}
+
+.roadmap-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.roadmap-card:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* Chart Container Animation */
+.chart-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.chart-container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CTA Container Animation */
+.cta-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.cta-container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-container:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* Contract Card Animation */
+.contract-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.contract-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contract-card:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* Footer Animation */
+.footer-content>* {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.footer-content>*.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Animation */
+.mobile-nav {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+}
+
+/* Keyframe Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
