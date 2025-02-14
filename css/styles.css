@@ -315,6 +315,30 @@ p {
         padding: 0.5rem;
     }
 
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 70px;
+        /* Set a fixed width equal to height for a square container */
+    }
+
+    .brand-logo img {
+        height: 70px;
+        width: 70px;
+        /* Make the image fill the square container */
+        object-fit: contain;
+        /* This will maintain aspect ratio while fitting in the container */
+        display: block;
+        /* Remove any inline element spacing */
+    }
+
+    .main-title {
+        font-size: 1.3rem;
+    }
+
+
     .company-info {
         flex-direction: column;
         align-items: flex-start;
@@ -351,9 +375,7 @@ p {
 }
 
 .mobile-nav .whale-section {
-    width: 50%;
-    /* Set a width (or use a fixed value like 300px) */
-    max-width: 400px;
+
     /* Optional: restrict maximum width */
     margin: 1rem auto;
     /* Center it horizontally and add vertical spacing */
@@ -1076,13 +1098,13 @@ html {
     /* hidden by default */
     margin-left: auto;
     margin-right: auto;
-    margin-top: 14px
+    margin-top: 10px
 }
 
 
 
 /* Mobile styles: display the burger menu */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -1176,10 +1198,17 @@ html {
     /* Added bottom margin */
     display: flex;
     justify-content: center;
-    gap: 1rem;
 }
 
-@media (max-width: 768px) {
+.mobile-nav .mobile-social-links {
+    /* Increased margin */
+    /* Added bottom margin */
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem
+}
+
+@media (max-width: 1000px) {
     .burger-menu {
         display: flex;
         position: fixed;
@@ -1331,12 +1360,16 @@ html {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
     .header-bottom,
     .header-social-links,
     .header-top .whale-section {
         display: none;
+    }
+
+    .header-top {
+        border: none;
     }
 }
 
